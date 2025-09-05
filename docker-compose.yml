@@ -32,7 +32,7 @@ services:
     ports:
       - "5002:5000"
     environment:
-      - FORMSPREE_URL=https://formspree.io/f/xwpqganp
+      - FORMSPREE_URL=https://formspree.io/f/xjkebaag
     networks:
       - restaurant-network
 
@@ -41,7 +41,7 @@ services:
     ports:
       - "5003:5000"
     environment:
-      - FORMSPREE_URL=https://formspree.io/f/xwpqganp
+      - FORMSPREE_URL=https://formspree.io/f/xjkebaag
     networks:
       - restaurant-network
 
