@@ -56,12 +56,12 @@ jobs:
             image_id=$(echo "$recent_images" | sed -n "${i}p" | awk '{print $1}')
             echo "Tagging $service with image $image_id"
             
-            docker tag $image_id $USERNAME/class-restuarants-$service:$SHORT_SHA
-            docker tag $image_id $USERNAME/class-restuarants-$service:latest
+            docker tag $image_id $USERNAME/demo-restuarants-$service:$SHORT_SHA
+            docker tag $image_id $USERNAME/demo-restuarants-$service:latest
             
-            docker push $USERNAME/class-restuarants-$service:$SHORT_SHA
-            docker push $USERNAME/class-restuarants-$service:latest
-            
+            docker push $USERNAME/demo-restuarants-$service:$SHORT_SHA
+            docker push $USERNAME/demo-restuarants-$service:latest
+
             i=$((i+1))
           done
         else
@@ -72,11 +72,11 @@ jobs:
             if [ -n "$image_id" ]; then
               echo "Tagging $service with image $image_id"
               
-              docker tag $image_id $USERNAME/class-restuarants-$service:$SHORT_SHA
-              docker tag $image_id $USERNAME/class-restuarants-$service:latest
+              docker tag $image_id $USERNAME/demo-restuarants-$service:$SHORT_SHA
+              docker tag $image_id $USERNAME/demo-restuarants-$service:latest
               
-              docker push $USERNAME/class-restuarants-$service:$SHORT_SHA
-              docker push $USERNAME/class-restuarants-$service:latest
+              docker push $USERNAME/demo-restuarants-$service:$SHORT_SHA
+              docker push $USERNAME/demo-restuarants-$service:latest
               
               i=$((i+1))
             fi
